@@ -17,10 +17,11 @@ const Login = () => {
     axios
     .post('http://localhost:8888/user/login',{email,password})
     .then((response)=>{
-      const {email}=response.data;
+      const {email, userId,token}=response.data;
       console.log('Email',email);
-      localStorage.setItem('email',response.data.email);
-      localStorage.setItem('token',response.data.token);
+      localStorage.setItem('email',email);
+      localStorage.setItem('userId',userId);
+      localStorage.setItem('token',token);
       enqueueSnackbar('Login Successful', { variant: 'success' });
       navigate('/home',{state:{email}});
 
