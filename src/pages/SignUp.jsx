@@ -15,7 +15,7 @@ const SignUp = () => {
    const handleSignup=()=>{
     //console.log('Sing up clicked');
     axios
-    .post('http://localhost:8888/user/signup',{email,password})
+    .post('https://my-work-out-gym-server.vercel.app/user/signup',{email,password})
     .then((response)=>{
       if(response?.status===201){
         enqueueSnackbar('Sign Up Successful!!', { variant: 'success' });

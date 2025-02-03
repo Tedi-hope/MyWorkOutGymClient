@@ -8,7 +8,7 @@ const DeleteGymInfo = () => {
 
     const handleDeleteGymInfo=()=>{
         axios
-        .delete(`http://localhost:8888/gym/${id}`)
+        .delete(`https://my-work-out-gym-server.vercel.app/gym/${id}`)
         .then(()=>{
             navigate('/home');
         })

@@ -15,7 +15,7 @@ const Login = () => {
    const handleLogin=()=>{
     //console.log('handle login is called');
     axios
-    .post('http://localhost:8888/user/login',{email,password})
+    .post('https://my-work-out-gym-server.vercel.app/user/login',{email,password})
     .then((response)=>{
       const {email, userId,token}=response.data;
       console.log('Email',email);

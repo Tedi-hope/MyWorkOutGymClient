@@ -54,7 +54,7 @@ const Home = () => {
 
     };
     axios
-     .post('http://localhost:8888/gym',gymData)
+     .post('https://my-work-out-gym-server.vercel.app/gym',gymData)
      .then((res)=>{
        console.log(res.data)
        setGymInfo([...gymInfo,res.data]);//Update state to add new entry
@@ -69,7 +69,7 @@ const Home = () => {
   
   useEffect(()=>{
    axios
-       .get('http://localhost:8888/gym')
+       .get('https://my-work-out-gym-server.vercel.app/gym')
        .then((res)=>{
          setGymInfo(res.data.data || []);//Ensure it is an array
          //console.log(res.data.data);
