@@ -43,7 +43,7 @@ const SignUp = () => {
               value={email} 
               onChange={(e)=>setEmail(e.target.value)}/><br />
              <label>Password:</label><br />
-             <input type="text" className="py-1 mb-7 mt-2 w-11/12 border-2" 
+             <input type="password" className="py-1 mb-7 mt-2 w-11/12 border-2" 
              value={password} 
              onChange={(e)=>setPassword(e.target.value)} /><br />
              <button className="btn btn-sm text-white border-2 px-2 py-2
